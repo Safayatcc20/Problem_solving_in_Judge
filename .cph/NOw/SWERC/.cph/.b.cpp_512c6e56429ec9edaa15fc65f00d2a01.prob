@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"d:\\Problem_Solving\\.cph\\NOw\\SWERC\\b.cpp","tests":[{"id":1728511692861,"input":"22 4 1 4","output":"7.3333333333\n"},{"id":1728511704578,"input":"7 2 655 988 ","output":"3.1415941720\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Problem_Solving\\.cph\\NOw\\SWERC\\b.cpp","group":"local","local":true}
