@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces September target\\B. Atilla's Favorite Problem.cpp","tests":[{"id":1669041628607,"input":"5\n1\na\n4\ndown\n10\ncodeforces\n3\nbcf\n5\nzzzzz","output":"1\n23\n19\n6\n26"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\B. Atilla's Favorite Problem.cpp","group":"local","local":true}

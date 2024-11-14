@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_20May2023_to July20_target_special\\B. Friendly Arrays.cpp","tests":[{"id":1695048485724,"input":"2\n2 3\n0 1\n1 2 3\n3 1\n1 1 2\n1","output":"0 1\n2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\B. Friendly Arrays.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_February_to_March_target\\B. Sale.cpp","tests":[{"id":1678701285174,"input":"5 3\n-6 0 35 -2 4\n","output":"8\n"},{"id":1678701323751,"input":"4 2\n7 0 0 -7\n","output":"7\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\B. Sale.cpp","group":"local","local":true}

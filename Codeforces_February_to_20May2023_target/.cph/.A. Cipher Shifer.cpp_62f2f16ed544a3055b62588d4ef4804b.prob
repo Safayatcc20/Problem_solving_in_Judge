@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_February_to_March_target\\A. Cipher Shifer.cpp","tests":[{"id":1686066043914,"input":"3\n8\nabacabac\n5\nqzxcq\n20\nccooddeeffoorrcceess","output":"ac\nq\ncodeforces"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\A. Cipher Shifer.cpp","group":"local","local":true}

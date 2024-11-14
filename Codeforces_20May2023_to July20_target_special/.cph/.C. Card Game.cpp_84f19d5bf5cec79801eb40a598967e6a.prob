@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_20May2023_to July20_target_special\\C. Card Game.cpp","tests":[{"id":1695808728015,"input":"4\n4\n-4 1 -3 5\n4\n1 -2 3 -4\n3\n-1 3 -5\n1\n-1","output":"5\n4\n2\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\C. Card Game.cpp","group":"local","local":true}

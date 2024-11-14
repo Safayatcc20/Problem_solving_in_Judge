@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_February_to_March_target\\A. Worms Evolution.cpp","tests":[{"id":1678701999559,"input":"5\n1 2 3 5 7","output":"3 2 1"},{"id":1678702005011,"input":"5\n1 8 1 5 1","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\A. Worms Evolution.cpp","group":"local","local":true}

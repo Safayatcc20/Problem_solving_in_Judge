@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_December_target\\C. Table.cpp","tests":[{"id":1673702034501,"input":"3 4 11\n","output":"8\n"},{"id":1673702045182,"input":"20000 10000 200000000","output":"200000000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\C. Table.cpp","group":"local","local":true}

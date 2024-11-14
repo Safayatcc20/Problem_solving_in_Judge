@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_20May2023_to July20_target_special\\A. Subtraction Game.cpp","tests":[{"id":1689354098610,"input":"3\n1 4\n1 5\n9 26\n","output":"2\n6\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\A. Subtraction Game.cpp","group":"local","local":true}

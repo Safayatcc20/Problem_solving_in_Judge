@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_December_target\\A. Chores.cpp","tests":[{"id":1669983597910,"input":"5 2 3\n6 2 3 100 1\n","output":"3\n"},{"id":1669983605121,"input":"7 3 4\n1 1 9 1 1 1 1","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\A. Chores.cpp","group":"local","local":true}

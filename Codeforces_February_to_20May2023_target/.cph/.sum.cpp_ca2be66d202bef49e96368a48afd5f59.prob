@@ -1,0 +1,1 @@
+{"name":"Local: sum","url":"d:\\Codeforces_February_to_March_target\\sum.cpp","tests":[{"id":1676019790629,"input":"3 5 4","output":"Sum of 3, 5 and 4 is 12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\sum.cpp","group":"local","local":true}

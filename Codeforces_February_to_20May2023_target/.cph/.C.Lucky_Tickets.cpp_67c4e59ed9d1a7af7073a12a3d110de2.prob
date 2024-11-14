@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_February_to_March_target\\C.Lucky_Tickets.cpp","tests":[{"id":1679591643596,"input":"3\n123 123 99\n","output":"1\n"},{"id":1679591662621,"input":"6\n1 1 1 23 10 3","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\C.Lucky_Tickets.cpp","group":"local","local":true}

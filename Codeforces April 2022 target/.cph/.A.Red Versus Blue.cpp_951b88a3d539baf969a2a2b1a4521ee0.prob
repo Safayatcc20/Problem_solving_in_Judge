@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces April 2022 target\\A.Red Versus Blue.cpp","tests":[{"id":1652591207818,"input":"3\n7 4 3\n6 5 1\n19 13 6","output":"RBRBRBR\nRRRBRR\nRRBRRBRRBRRBRRBRRBR"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces April 2022 target\\A.Red Versus Blue.cpp","group":"local","local":true}

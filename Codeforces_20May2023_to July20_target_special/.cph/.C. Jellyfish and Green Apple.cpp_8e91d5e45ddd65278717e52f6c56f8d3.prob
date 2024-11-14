@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_20May2023_to July20_target_special\\C. Jellyfish and Green Apple.cpp","tests":[{"id":1696091876784,"input":"4\n10 5\n1 5\n10 4\n3 4","output":"0\n-1\n2\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\C. Jellyfish and Green Apple.cpp","group":"local","local":true}

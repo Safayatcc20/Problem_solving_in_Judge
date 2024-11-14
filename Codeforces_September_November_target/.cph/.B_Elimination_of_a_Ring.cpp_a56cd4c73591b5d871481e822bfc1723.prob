@@ -1,0 +1,1 @@
+{"name":"Local: B_Elimination_of_a_Ring","url":"d:\\Codeforces September target\\B_Elimination_of_a_Ring.cpp","tests":[{"id":1669315643410,"input":"3\n4\n1 2 3 2\n4\n1 2 1 2\n1\n1","output":"4\n3\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\B_Elimination_of_a_Ring.cpp","group":"local","local":true}

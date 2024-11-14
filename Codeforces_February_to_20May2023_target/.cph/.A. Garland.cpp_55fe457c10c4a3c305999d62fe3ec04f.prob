@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_February_to_March_target\\A. Garland.cpp","tests":[{"id":1680013079581,"input":"3\n9546\n0000\n3313","output":"4\n-1\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\A. Garland.cpp","group":"local","local":true}

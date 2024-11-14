@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_February_to_March_target\\C. Koxia and Number Theory.cpp","tests":[{"id":1684772199742,"input":"2\n3\n5 7 10\n3\n3 3 4","output":"YES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\C. Koxia and Number Theory.cpp","group":"local","local":true}

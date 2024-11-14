@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_December_target\\B. Hossam and Friends.cpp","tests":[{"id":1670775234217,"input":"2\n3 2\n1 3\n2 3\n4 2\n1 2\n2 3","output":"4\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\B. Hossam and Friends.cpp","group":"local","local":true}

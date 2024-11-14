@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_February_to_March_target\\A. Integer Points.cpp","tests":[{"id":1683048485773,"input":"3\n3\n1 3 2\n2\n0 3\n1\n1\n1\n1\n1\n2\n1\n1","output":"3\n1\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\A. Integer Points.cpp","group":"local","local":true}

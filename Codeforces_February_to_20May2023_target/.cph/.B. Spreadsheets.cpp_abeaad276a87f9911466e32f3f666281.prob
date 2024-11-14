@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_February_to_March_target\\B. Spreadsheets.cpp","tests":[{"id":1677165579031,"input":"2\nR23C55\nBC23","output":"BC23\nR23C55"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\B. Spreadsheets.cpp","group":"local","local":true}

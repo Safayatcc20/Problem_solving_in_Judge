@@ -1,0 +1,1 @@
+{"name":"Local: Can You Multiply","url":"d:\\Codeforces_20May2023_to July20_target_special\\Can You Multiply.cpp","tests":[{"id":1693922493614,"input":"3\n100 1\n256 4512\n12345 654321","output":"0\n72\n45"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\Can You Multiply.cpp","group":"local","local":true}

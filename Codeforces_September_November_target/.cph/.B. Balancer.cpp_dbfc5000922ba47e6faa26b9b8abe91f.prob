@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces September target\\B. Balancer.cpp","tests":[{"id":1663750172526,"input":"6\n1 6 2 5 3 7","output":"12\n"},{"id":1663750243206,"input":"5\n1 2 3 5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\B. Balancer.cpp","group":"local","local":true}

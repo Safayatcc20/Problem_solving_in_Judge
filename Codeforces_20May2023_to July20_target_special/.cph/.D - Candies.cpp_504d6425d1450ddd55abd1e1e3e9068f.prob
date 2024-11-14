@@ -1,0 +1,1 @@
+{"name":"Local: D - Candies","url":"d:\\Codeforces_20May2023_to July20_target_special\\D - Candies.cpp","tests":[{"id":1687434645621,"input":"4\n2\n3\n7\n17","output":"-1\n1\n2 \n2\n2 2 \n4\n2 1 1 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\D - Candies.cpp","group":"local","local":true}

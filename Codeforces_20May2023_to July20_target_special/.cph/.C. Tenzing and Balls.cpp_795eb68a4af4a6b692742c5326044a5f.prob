@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces_20May2023_to July20_target_special\\C. Tenzing and Balls.cpp","tests":[{"id":1687618179707,"input":"2\n5\n1 2 2 3 3\n4\n1 2 1 2","output":"4\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_20May2023_to July20_target_special\\C. Tenzing and Balls.cpp","group":"local","local":true}

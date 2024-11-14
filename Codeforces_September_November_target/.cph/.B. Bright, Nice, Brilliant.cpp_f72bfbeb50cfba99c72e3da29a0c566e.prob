@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces September target\\B. Bright, Nice, Brilliant.cpp","tests":[{"id":1663937526284,"input":"3\n1\n2\n3","output":"1 \n1 \n1 1 \n1 \n1 1 \n1 0 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\B. Bright, Nice, Brilliant.cpp","group":"local","local":true}

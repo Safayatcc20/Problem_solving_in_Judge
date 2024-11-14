@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces September target\\A. Technical Support.cpp","tests":[{"id":1666539366925,"input":"5\n4\nQQAA\n4\nQQAQ\n3\nQAA\n1\nQ\n14\nQAQQAQAAQQQAAA","output":"\nYes\nNo\nYes\nNo\nYes\n\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\A. Technical Support.cpp","group":"local","local":true}

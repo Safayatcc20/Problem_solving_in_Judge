@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_December_target\\B. Matrix of Differences.cpp","tests":[{"id":1673191267796,"input":"2\n2\n3","output":""},{"id":1673192299759,"input":"5\n4\n5\n6\n7\n8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\B. Matrix of Differences.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_December_target\\A. Flip Flop Sum.cpp","tests":[{"id":1675262278763,"input":"4\n5\n-1 1 1 -1 -1\n5\n1 1 -1 -1 -1\n2\n1 1\n4\n1 -1 -1 1","output":"3\n3\n-2\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\A. Flip Flop Sum.cpp","group":"local","local":true}

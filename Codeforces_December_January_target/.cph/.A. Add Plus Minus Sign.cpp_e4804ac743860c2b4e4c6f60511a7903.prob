@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Codeforces_December_target\\A. Add Plus Minus Sign.cpp","tests":[{"id":1671288550330,"input":"3\n2\n11\n5\n01101\n5\n10001","output":"-\n+-++\n+++-"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_December_target\\A. Add Plus Minus Sign.cpp","group":"local","local":true}

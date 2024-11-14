@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\Codeforces September target\\C. Swap Game.cpp","tests":[{"id":1667577798044,"input":"3\n2\n1 1\n2\n2 1\n3\n5 4 4\n","output":"Bob\nAlice\nAlice\n"},{"id":1667578364164,"input":"1\n3\n3 4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces September target\\C. Swap Game.cpp","group":"local","local":true}

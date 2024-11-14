@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Codeforces_February_to_March_target\\B. Binary Cafe.cpp","tests":[{"id":1686067215040,"input":"5\n1 2\n2 1\n2 2\n10 2\n179 100\n","output":"2\n2\n3\n4\n180\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces_February_to_March_target\\B. Binary Cafe.cpp","group":"local","local":true}
