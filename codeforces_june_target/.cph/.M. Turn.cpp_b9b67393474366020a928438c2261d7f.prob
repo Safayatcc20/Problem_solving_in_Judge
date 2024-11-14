@@ -1,0 +1,1 @@
+{"name":"Local: M","url":"d:\\codeforces june target\\M. Turn.cpp","tests":[{"id":1661200668679,"input":"60\n","output":"1\n"},{"id":1661200672322,"input":"-60","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\M. Turn.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\codeforces june target\\A. Image.cpp","tests":[{"id":1661611539914,"input":"5\nrb\nbr\ncc\nwb\naa\naa\nab\ncd\nyy\nxx\n","output":"1\n2\n0\n3\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\A. Image.cpp","group":"local","local":true}

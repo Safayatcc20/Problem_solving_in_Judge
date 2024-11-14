@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\codeforces june target\\A. YES or YES.cpp","tests":[{"id":1657775452894,"input":"10\nYES\nyES\nyes\nYes\nYeS\nNoo\norZ\nyEz\nYas\nXES\n","output":"YES\nYES\nYES\nYES\nYES\nNO\nNO\nNO\nNO\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\A. YES or YES.cpp","group":"local","local":true}

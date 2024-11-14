@@ -1,0 +1,1 @@
+{"name":"Local: D - Fill the Containers","url":"d:\\codeforces june target\\D - Fill the Containers.cpp","tests":[{"id":1655824577612,"input":"5 3\n1 2 3 4 5\n3 2\n4 78 9","output":"6\n82"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\D - Fill the Containers.cpp","group":"local","local":true}

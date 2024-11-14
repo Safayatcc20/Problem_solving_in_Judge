@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\codeforces june target\\A. Exams.cpp","tests":[{"id":1657900406716,"input":"4 8","output":"4"},{"id":1657900679384,"input":"4 10\n","output":"2"},{"id":1657900680808,"input":"1 3","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\A. Exams.cpp","group":"local","local":true}

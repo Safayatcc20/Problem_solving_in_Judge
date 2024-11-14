@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\codeforces june target\\A. Power Of Two.cpp","tests":[{"id":1661280867289,"input":"8\n","output":"YES\n"},{"id":1661280874080,"input":"10\n","output":"NO\n"},{"id":1661280965089,"input":"1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces june target\\A. Power Of Two.cpp","group":"local","local":true}
