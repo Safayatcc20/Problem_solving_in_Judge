@@ -87,7 +87,7 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
+const long long N = 1e5 + 10;
 bool prime[N+1];
 vector<long long>pl;
 void sieve()
@@ -117,27 +117,66 @@ bool isprime(long long x)
         return false;
     return !prime[x];
 }
-void solve(){
-    int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
+vector<int>primelist;
+bool is_composite[N];
+//Linear Sieve
+//the code below performs in O(n) complexity for seive
+void linear_sieve () {
+    std::fill (is_composite, is_composite + N, false);
+    primelist.push_back (1);
+    for (int i = 2; i < N; ++i) {
+      if (!is_composite[i]) 
+      primelist.push_back (i);
+      for (int j = 0; j < primelist.size () && i * primelist[j] < N; ++j) {
+           is_composite[i * primelist[j]] = true;
+           if (i % primelist[j] == 0) break;
+      }
     }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
+}
+int NN = 1e5+10;
+vector<vector<int>>divisor(NN , vector<int>());
+void divisors(){
+    for(int i = 1; i< NN ;i++){
+        for(int j = i; j < NN; j+=i){
+            divisor[j].push_back(i);
         }
     }
-    
+}
+void solve(){
+    int n , m;
+    cin >> n>> m;
+    vector<int>v(m);
+    for(int i = 0; i< m; i++) cin >> v[i];
+    if(m == 1 and n > 1) {
+        cout << -1 << sad;
+        return;
+    }
+    vector<int>index(n+1);
+    reverse(all(v));
+    for(int i = 0; i< m; i++) index[v[i]] = i;
+    vector<int>ans(n+1);
+    ans[1] = v[0];
+    // if(m > 1) ans[2] = v[1];
+    // if(n> 2 and m > 1) ans[3] = v[1];
+    for(int i = 2; i<= n ; i++){
+        int cnt = 0, kothaihobe = 0;
+        for(auto &x:divisor[i]){
+            if(i != x){
+                kothaihobe = max(kothaihobe , index[ans[x]]);
+            }
+        }
+        //cout << i << " "<< cnt << " "<< kothaihobe << sad;
+        
+        if(kothaihobe+1 >= m){
+            cout << -1 << sad;
+            return;
+        }
+        ans[i] = v[kothaihobe+1];
+    }
+    for(int i = 1; i<= n;i++){
+        cout <<ans[i] << " " ; 
+    }
+    cout << sad;
 }
 int32_t main()
 {
@@ -146,8 +185,8 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
     cin >> t;
+    divisors();
     while (t--)
     {
         solve();

@@ -87,57 +87,44 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
-    }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
-}
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
-}
 void solve(){
-    int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
+    int x  , y;
+    cin >> x >> y;
+    if(y% x== 0){
+        cout << x << sad;
     }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
+    else if(x > y){
+        cout << (x+y) << sad;
+    }
+    else{
+        // ax + r = n;
+        // nb + r = y; 
+        // or , y = abx + (b +1)r; 
+        // (b+1)r = y%x , ab = y / x;
+        int ab = y / x;
+        int b1r = y % x;
+        for(int i = 1; i* i<= ab; i++){
+            if(ab%i) continue;
+            int b = ab / i;
+            if(b1r % (b+1) == 0){
+                int r = b1r / (b+1);
+                int res = (y - r)/ b;
+                if(r < x ) {
+                    cout << res << sad;
+                    return;
+                }
+            }
+            b = i;
+            if(b1r % (b+1) == 0){
+                int r = b1r / (b+1);
+                int res = (y - r)/ b;
+                if(r < x ) {
+                    cout << res << sad;
+                    return;
+                }
+            }
         }
     }
-    
 }
 int32_t main()
 {
@@ -146,7 +133,6 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
     cin >> t;
     while (t--)
     {

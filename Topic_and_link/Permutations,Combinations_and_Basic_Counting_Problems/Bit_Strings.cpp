@@ -87,57 +87,27 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
-    }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
+ //key shortcut ctrl + d u can select same name for this 
+// remember mod depends on statement;
+const long long mod = 1000000007;
+int bin_power(int a, int n ,int mod) {
+  int ans = 1% mod;
+  while(n){
+    if(n & 1) ans = 1LL * ans * a % mod;
+    a = 1LL * a * a % mod;
+    n >>= 1;
+  }
+  return ans;
 }
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
+
+// 1 / a % p
+int inverse(int a, int p) {
+  return bin_power(a, p - 2, p);
 }
 void solve(){
     int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
-    }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
-        }
-    }
-    
+    cin >> n;
+    cout << bin_power(2 , n , mod)%mod << sad;
 }
 int32_t main()
 {
@@ -146,8 +116,7 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         solve();

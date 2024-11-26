@@ -87,57 +87,30 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
-    }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
+const int N = 2e6 + 9, mod = 1e9 + 7;
+// Using Extended Euclidean Algorithm 
+int f[N], inv[N], finv[N];
+void prec() {
+  f[0] = 1;
+  for (int i = 1; i < N; i++) f[i] = 1LL * i * f[i - 1] % mod;
+  inv[1] = 1;
+  for (int i = 2; i < N; i++ ) {
+    inv[i] = (-(1LL * mod / i) * inv[mod % i] ) % mod;
+    inv[i] = (inv[i] + mod) % mod;
+  }
+  finv[0] = 1;
+  for (int i = 1; i < N; i++) finv[i] = 1LL * inv[i] * finv[i - 1] % mod;
 }
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
+int ncr(int n, int r) {
+  if (n < r || n < 0 || r < 0) return 0;
+  return 1LL * f[n] * finv[n - r] % mod * finv[r] % mod;
 }
 void solve(){
-    int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
-    }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
-        }
-    }
-    
+    int n , m;
+    cin >>n >>m;
+    int stars = (n+m-1)%mod;
+    int bars = m %mod;
+    cout << ncr(stars , bars) << sad;
 }
 int32_t main()
 {
@@ -146,8 +119,8 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
-    cin >> t;
+    //cin >> t;
+    prec();
     while (t--)
     {
         solve();

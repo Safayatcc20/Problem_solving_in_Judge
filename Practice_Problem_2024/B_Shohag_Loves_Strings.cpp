@@ -87,57 +87,28 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
-    }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
-}
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
-}
 void solve(){
-    int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
-    }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
-        }
+    string s;
+    cin >> s;
+    int n = s.size();
+    if(s.size() == 1){
+        cout << -1 << sad;
+        return;
     }
     
+    for(int i = 0; i < n-1 ;i++){
+        if(s[i] == s[i+1]){
+            cout << s[i] <<s[i+1] << sad;
+            return;
+        }
+    }
+    for(int i = 0; i < n-2 ;i++){
+        if(s[i] != s[i+1] and s[i+2] != s[i] and s[i+1] !=s[i+2]){
+            cout << s[i] <<s[i+1]<<s[i+2] << sad;
+            return;
+        }
+    }
+    cout<<-1 << sad;
 }
 int32_t main()
 {
@@ -146,7 +117,6 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
     cin >> t;
     while (t--)
     {

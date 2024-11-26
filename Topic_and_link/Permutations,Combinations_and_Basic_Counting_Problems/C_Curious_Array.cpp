@@ -26,12 +26,6 @@ long long lcm(long long x, long long y)
 {
     return ((x * y) / gcd(x, y));
 }
-long long fact(long long n)
-{
-    if (n == 0)
-        return 1;
-    return n * fact(n - 1);
-}
 long long findXor(long long n){//reming: function calling findXor(sending value - 1);
     long long rest = n % 4;
     if(rest == 0) return n;
@@ -87,57 +81,84 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
+ //key shortcut ctrl + d u can select same name for this 
+// remember mod depends on statement;
+const long long mod = 1000000007; // 10^9
+
+int bin_power(int a, int n ,int mod) {
+  int ans = 1% mod;
+  while(n){
+    if(n & 1) ans = 1LL * ans * a % mod;
+    a = 1LL * a * a % mod;
+    n >>= 1;
+  }
+  return ans;
+}
+int inverse(int a, int p) {
+  return bin_power(a, p - 2, p);
+}
+
+const long long MOD = 1000000007;
+const int MAXN = 1000005;
+const int MAXK = 101;
+
+vector<long long> fact(MAXN , 1);        // Factorial array
+vector<long long> inv_fact(MAXN , 1);    // Inverse factorial array
+
+
+// Precompute factorials and their inverses modulo MOD
+void precompute_factorials() {
+    for (int i = 2; i <= MAXN ; i++) {
+        fact[i] = (fact[i - 1] * i) % MOD;
     }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
+    inv_fact[MAXN ] = inverse(fact[MAXN ], MOD);  // Fermat's little theorem
+    for (int i = MAXN - 2; i >= 0; i--) {
+        inv_fact[i] = (inv_fact[i + 1] * (i + 1)) % MOD;
+    }
 }
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
+
+// Compute C(n, k) % MOD using factorials and inverse factorials
+long long binomial(long long n, long long k) {
+    if (k < 0 || k > n) return 0;
+    return (fact[n] * inv_fact[k] % MOD) * inv_fact[n - k] % MOD;
 }
+
 void solve(){
-    int n;
-    cin >>n;
+    int n  , q;
+    cin >> n >> q;
     vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
+    for(auto &x:v) cin >> x;
+    precompute_factorials();
+    vector<vector<int>>start(n+1 , vector<int>(101,0));
+    vector<vector<pair<int , int>>>last(n+1);
+    for(int i = 0 ;i <q;i++){
+        int l , r , k;
+        cin >> l >> r >> k;
+        start[l-1][k]++;
+        last[r].push_back({k , l-1});
     }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
+    vector<int>contribution(101, 0);
+    for(int i = 0 ;i <n; i++){
+        vector<int>range = start[i];
+        int sum = 0 ;
+        for(int j = 100; j>= 0 ;j--){
+            sum = (sum + contribution[j]) % mod;
+            range[j]  = (sum + range[j]) % mod;
         }
+        contribution = range;
+        for(auto &x:last[i]){
+            for (int j = 0; j <= x.first; j++) {
+                contribution[j] = (contribution[j] - binomial(i - x.second - 1 + x.first - j, x.first - j) + mod) % mod;
+            }
+        }
+        for (int j = 100; j >= 0; j--) {
+            v[i] = (v[i] + contribution[j]) % mod;
+        }
+        
+        if (v[i] < 0) v[i] += mod;
+        cout << v[i] << " ";
     }
-    
+    cout << sad;
 }
 int32_t main()
 {
@@ -146,8 +167,7 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         solve();

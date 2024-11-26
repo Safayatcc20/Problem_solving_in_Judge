@@ -87,57 +87,21 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const long long N = 1e7 + 10;
-bool prime[N+1];
-vector<long long>pl;
-void sieve()
-{
-    prime[1] = prime[0] = true;
-    //jodi isprime use na kori tkn ei line use korte hobe
-    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
-    for (long long i = 3; i * i <= N; i += 2)
-    {
-        if (prime[i])
-        {
-            continue;
-        }
-        for (long long j = i * i; j < N; j += i + i)
-        {
-            prime[j] = true;
-        }
-    }
-    for (long long i = 2; i<= N; i++)
-       if(prime[i] == false) pl.push_back(i);
-}
-bool isprime(long long x)
-{
-    if (x == 2)
-        return true;
-    else if ((x % 2 == 0))
-        return false;
-    return !prime[x];
-}
 void solve(){
-    int n;
-    cin >>n;
-    vector<int>v(n);
-    int even = 0 , odd = 0 ;
-    for(auto &x:v) {
-        cin >> x;
-        if(x&1) odd++;
-        else even++;
+    int x , m;
+    cin >> x >> m;
+    int ans = 0 ;
+    for(int  i = 1; i<= min(x, m);i++){
+        int y = x ^ (i);
+        if(y % x == 0 or y % i == 0) ans++;
     }
-    map<int , int>mp;
-    for(int i = 0; i<n; i++){
-        int x = v[i];
-        for(int  j = 0 ; j < pl.size();j++){
-            if(pl[j] * pl[j] > x) break;
-            if(x % pl[j] ) continue;
-            mp[pl[j]]++;
-            if(pl[j] * pl[j] != x) mp[x / pl[j]]++;
-        }
+    int secondmultipleTo_Highest_Multiple = m / x;
+    ans += max(0ll , secondmultipleTo_Highest_Multiple-2);
+    for(int i = max(2ll , secondmultipleTo_Highest_Multiple) ; i <= secondmultipleTo_Highest_Multiple + 2; i++){
+        int y = (x * i)^ x;
+        if(y <=m and y >= 1) ans++;
     }
-    
+    cout << ans << sad;
 }
 int32_t main()
 {
@@ -146,7 +110,6 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    sieve();
     cin >> t;
     while (t--)
     {

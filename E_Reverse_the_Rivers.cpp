@@ -103,12 +103,6 @@ void solve() {
             cout << a[j].back() << sad;
         }
     }
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= k; j++) {
-            cout << a[j][k] << " ";
-        }
-        cout <<sad;
-    }
 
     while (q--) {
         int m;
