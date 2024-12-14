@@ -59,10 +59,12 @@
   "files.associations": {
     "*.jsx": "javascriptreact",
     "iostream": "cpp",
-    "numeric": "cpp",
-    "cstdlib": "cpp",
-    "ostream": "cpp",
-    "iosfwd": "cpp"
-  },
-  "C_Cpp.errorSquiggles": "disabled"
+    "*.tcc": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp"
+  }
 }
