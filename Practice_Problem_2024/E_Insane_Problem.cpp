@@ -87,66 +87,40 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-
-bool func(string s, string t) {
-    int n = s.size();
-    int f = -1, e = -1;
-    for(int i = 0; i < n; i++) {
-        if(s[i] != t[i] and f == -1) {
-            f = i;
-        } 
-        if(s[i] != t[i]) {
-            e = i;
+void solve(){
+    int k , l1 , r1 , l2 , r2;
+    cin >> k >> l1 >> r1 >> l2 >> r2;
+    int left = max(l1 , l2);
+    int right = min(r1 , r2);
+    if( k == 1){
+        int left = max(l1 , l2);
+        int right = min(r1 , r2);
+        if(left > right) cout << 0 << sad;
+        else cout << right - left +1 << sad;
+        return;
+    } 
+    int ans =  0;
+    if(left> right) ans = 0;
+    else ans = right - left + 1;
+    for(int i = k ; ;i*=k){
+        if(i > r2){
+            break;
+        }
+        int l = i * l1;
+        int r = i * r1;
+        int left = max(l , l2);
+        int right = min(r , r2);
+        if(left > right) continue;
+        else{
+            int lc = (left+i-1)/i;
+            int rc = right/i;
+            // cout << i << " "<< l <<  " "<< r << " ";
+            // cout << left << " "<< right <<  " "<< lc << " "<<rc << " ";
+            ans += rc - lc + 1;
+            //cout << sad;
         }
     }
-    if(f == -1) return true;
-    reverse(s.begin()+f,s.begin()+e + 1);
-    return s == t;
-}
-
-void solve(){
-    int x1, y1, z1;
-    cin >> x1 >> y1 >> z1;
-    int x2, y2, z2;
-    cin >> x2 >> y2 >> z2;
-    int k; cin >> k;
-    int a = abs(x1 - x2);
-    int b = abs(y1 - y2);
-    int c = abs(z1 - z2);
-    vector<int> v;
-    v.push_back(a);
-    v.push_back(c);
-    v.push_back(b);
-    sort(all(v));
-    // int ans = v[0] + min(v[0] * k, v[2]);
-    // v[2] -= min(v[0] * k, v[2]);
-    // v[0] = 0;
-    // sort(all(v));
-    // ans += v[1] + min(v[1] * k, v[2]);
-    // v[2] -= min(v[1] * k, v[2]);
-    // ans += min(k, v[2]);
-    // v[2] -= k;
-    // ans += v[2] + v[2] / k;
-    int ans = 0;
-    int kotolagbe = (v[1] + k -1)  / k;
-    ans += min(v[0] , kotolagbe) + min(kotolagbe * k,v[1]);
-    v[1] -=min(kotolagbe * k,v[1]);
-    v[0] = v[0] - min(v[0] , kotolagbe);
-    int secondcontribution =  min(kotolagbe * k * k , v[2]);
-    cout << secondcontribution<< " ";
-    ans += secondcontribution;
-    v[2] = v[2] - secondcontribution;
-    sort(all(v));
-    cout << v[0] << " ";
-    cout << v[1] << " ";
-    cout << v[2] << " ";
-    kotolagbe = (v[2] + k -1)  / k;
-    ans += min(v[1] , kotolagbe) + min(kotolagbe * k,v[2]);
-    v[2] -=min(kotolagbe * k,v[2]);
-    v[1] = v[1] - min(v[1] , kotolagbe);
-    if(v[1]) ans += v[1] + v[1]/k;
-    if(v[2]) ans += v[2] + v[2]/k;
-    cout << ans << '\n';
+    cout << ans << sad;
 }
 int32_t main()
 {
