@@ -1,0 +1,1 @@
+{"name":"Local: A - N-choice question","url":"d:\\ATCODER\\A - N-choice question.cpp","tests":[{"id":1682769855231,"input":"3 125 175\n200 300 400\n","output":"2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\A - N-choice question.cpp","group":"local","local":true}

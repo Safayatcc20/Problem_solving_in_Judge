@@ -1,0 +1,1 @@
+{"name":"Local: H","url":"d:\\2SAT_Problem\\H.+_1.cpp","tests":[{"id":1721421144854,"input":"1\n4\n1 -2 -3 -4\n-4 4 -1 -3\n1 2 -2 -3","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\2SAT_Problem\\H.+_1.cpp","group":"local","local":true}

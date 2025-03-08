@@ -1,0 +1,1 @@
+{"name":"Local: B - Periodic Strings","url":"d:\\cp_lab\\exp-5\\B - Periodic Strings.cpp","tests":[{"id":1685731337492,"input":"1\n\nHoHoHo","output":"2"},{"id":1685731890207,"input":"1\n\nabcabcabcabc","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp_lab\\exp-5\\B - Periodic Strings.cpp","group":"local","local":true}

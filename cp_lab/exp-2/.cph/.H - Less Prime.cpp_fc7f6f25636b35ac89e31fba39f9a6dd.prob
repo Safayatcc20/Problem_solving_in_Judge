@@ -1,0 +1,1 @@
+{"name":"Local: H - Less Prime","url":"d:\\cp_lab\\exp-2\\H - Less Prime.cpp","tests":[{"id":1679691087257,"input":"5\n4399\n614\n8201\n101\n7048","output":"2203\n311\n4111\n53\n3527"},{"id":1679691702933,"input":"1\n100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp_lab\\exp-2\\H - Less Prime.cpp","group":"local","local":true}

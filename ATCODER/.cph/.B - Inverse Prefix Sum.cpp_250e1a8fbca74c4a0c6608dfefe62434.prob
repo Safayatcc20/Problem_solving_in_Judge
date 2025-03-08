@@ -1,0 +1,1 @@
+{"name":"Local: B - Inverse Prefix Sum","url":"d:\\ATCODER\\B - Inverse Prefix Sum.cpp","tests":[{"id":1670069145072,"input":"3\n3 4 8\n","output":"3 1 4\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\B - Inverse Prefix Sum.cpp","group":"local","local":true}

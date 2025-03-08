@@ -1,0 +1,1 @@
+{"name":"Local: task1","url":"d:\\CP_Algorithm\\lab_6\\task1.cpp","tests":[{"id":1699177140222,"input":"6 8\n1 2\n1 3\n2 4\n2 5\n3 5\n4 5\n4 6\n5 6","output":"1 2 4 5 3 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP_Algorithm\\lab_6\\task1.cpp","group":"local","local":true}

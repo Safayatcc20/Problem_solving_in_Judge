@@ -1,0 +1,1 @@
+{"name":"Local: task_2","url":"d:\\CP_Algorithm\\Lab_1\\task_2.cpp","tests":[{"id":1693665345103,"input":"5\n-4 4 9 12 31\n12","output":"12 is found at index 3"},{"id":1693665391965,"input":"5\n-4 4 9 12 31\n11","output":"11 is not found."}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP_Algorithm\\Lab_1\\task_2.cpp","group":"local","local":true}

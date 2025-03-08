@@ -1,0 +1,1 @@
+{"name":"Local: H - Calendar","url":"d:\\ICPC collaborative\\contest 34\\H - Calendar.cpp","tests":[{"id":1661783000059,"input":"3\n3 27 4\n6 24 2\n8 6 11","output":"85"},{"id":1661783935302,"input":"1\n1 1 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ICPC collaborative\\contest 34\\H - Calendar.cpp","group":"local","local":true}

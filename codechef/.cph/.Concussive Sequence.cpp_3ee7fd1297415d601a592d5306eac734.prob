@@ -1,0 +1,1 @@
+{"name":"Local: Concussive Sequence","url":"d:\\codechef\\Concussive Sequence.cpp","tests":[{"id":1694620564298,"input":"3\n3\n1 1 1\n5\n1 2 3 4 5\n5\n1 1 2 2 1","output":"-1\n1 3 2 5 4\n1 2 1 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codechef\\Concussive Sequence.cpp","group":"local","local":true}

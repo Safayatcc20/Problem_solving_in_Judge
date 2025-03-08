@@ -1,0 +1,1 @@
+{"name":"Local: A - wwwvvvvvv","url":"d:\\ATCODER\\A - wwwvvvvvv.cpp","tests":[{"id":1669464109725,"input":"wwwvvvvvv\n","output":"12"},{"id":1669464170136,"input":"v\n","output":"1"},{"id":1669464177904,"input":"vvwvw\n","output":"7\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\A - wwwvvvvvv.cpp","group":"local","local":true}

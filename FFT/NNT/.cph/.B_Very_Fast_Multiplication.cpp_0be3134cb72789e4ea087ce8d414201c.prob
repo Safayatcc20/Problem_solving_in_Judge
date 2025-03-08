@@ -1,0 +1,1 @@
+{"name":"Local: B_Very_Fast_Multiplication","url":"d:\\FFT\\NNT\\B_Very_Fast_Multiplication.cpp","tests":[{"id":1722106954810,"input":"5\n4 2\n123 43\n324 342\n0 12\n9999 12345","output":"8\n5289\n110808\n0\n123437655"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\FFT\\NNT\\B_Very_Fast_Multiplication.cpp","group":"local","local":true}

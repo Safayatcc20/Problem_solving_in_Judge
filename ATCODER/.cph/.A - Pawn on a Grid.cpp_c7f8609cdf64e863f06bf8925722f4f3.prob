@@ -1,0 +1,1 @@
+{"name":"Local: A - Pawn on a Grid","url":"d:\\ATCODER\\A - Pawn on a Grid.cpp","tests":[{"id":1670068997871,"input":"6 5\n#.#.#\n....#\n..##.\n####.\n..#..\n#####\n","output":"16\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\A - Pawn on a Grid.cpp","group":"local","local":true}

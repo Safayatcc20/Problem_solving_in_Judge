@@ -1,0 +1,1 @@
+{"name":"Local: C - Max Even","url":"d:\\ATCODER\\C - Max Even.cpp","tests":[{"id":1665233100612,"input":"3\n2 3 4\n","output":"6\n"},{"id":1665233357328,"input":"2\n1 0","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\C - Max Even.cpp","group":"local","local":true}

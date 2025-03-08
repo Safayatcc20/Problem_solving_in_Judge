@@ -1,0 +1,1 @@
+{"name":"Local: B - Nice Grid","url":"d:\\ATCODER\\B - Nice Grid.cpp","tests":[{"id":1660572668795,"input":"3 5\n","output":"black\n"},{"id":1660572763136,"input":"4 5","output":"white"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\B - Nice Grid.cpp","group":"local","local":true}

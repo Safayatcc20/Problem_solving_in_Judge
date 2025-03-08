@@ -1,0 +1,1 @@
+{"name":"Local: E - Jumping Champion","url":"d:\\cp_lab\\exp-2\\E - Jumping Champion.cpp","tests":[{"id":1679693066099,"input":"3\n2 11\n2 5\n30 50","output":"The jumping champion is 2\nNo jumping champion\nThe jumping champion is 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp_lab\\exp-2\\E - Jumping Champion.cpp","group":"local","local":true}

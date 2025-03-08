@@ -1,0 +1,1 @@
+{"name":"Local: lcs","url":"d:\\CP_Algorithm\\lcs.cpp","tests":[{"id":1699694170458,"input":"ACAYKP\nCAPCAK","output":"4"},{"id":1699694283483,"input":"WEDONTNEEDNOEDUCATION\nWEDONTNEEDNOTHOUGHTCONTROL","output":"16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP_Algorithm\\lcs.cpp","group":"local","local":true}

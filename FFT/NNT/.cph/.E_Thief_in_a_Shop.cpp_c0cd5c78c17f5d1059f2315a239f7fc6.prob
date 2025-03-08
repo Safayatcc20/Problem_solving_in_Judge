@@ -1,0 +1,1 @@
+{"name":"Local: E_Thief_in_a_Shop","url":"d:\\FFT\\NNT\\E_Thief_in_a_Shop.cpp","tests":[{"id":1722291703472,"input":"3 2\n1 2 3","output":"2 3 4 5 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\FFT\\NNT\\E_Thief_in_a_Shop.cpp","group":"local","local":true}

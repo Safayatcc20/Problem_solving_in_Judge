@@ -1,0 +1,1 @@
+{"name":"Local: A - Nine","url":"d:\\ATCODER\\A - Nine.cpp","tests":[{"id":1691074458252,"input":"7 8\n","output":"Yes\n"},{"id":1691074461834,"input":"1 9\n","output":"No\n"},{"id":1691074465763,"input":"3 4","output":"No"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\A - Nine.cpp","group":"local","local":true}

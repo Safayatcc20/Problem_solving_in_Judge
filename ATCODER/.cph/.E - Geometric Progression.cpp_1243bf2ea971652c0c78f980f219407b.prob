@@ -1,0 +1,1 @@
+{"name":"Local: E - Geometric Progression","url":"d:\\ATCODER\\E - Geometric Progression.cpp","tests":[{"id":1678541743355,"input":"3 4 7\n","output":"5\n"},{"id":1678541758431,"input":"8 10 9","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\E - Geometric Progression.cpp","group":"local","local":true}

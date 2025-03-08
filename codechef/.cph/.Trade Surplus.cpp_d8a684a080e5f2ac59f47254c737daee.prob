@@ -1,0 +1,1 @@
+{"name":"Local: Trade Surplus","url":"d:\\codechef\\Trade Surplus.cpp","tests":[{"id":1694616221329,"input":"4\n4 6 5 4\n1 1 1 1\n10 5 12 6\n1 100 1 100","output":"YES\nNO\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codechef\\Trade Surplus.cpp","group":"local","local":true}

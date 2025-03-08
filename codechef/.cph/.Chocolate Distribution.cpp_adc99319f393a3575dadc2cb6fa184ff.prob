@@ -1,0 +1,1 @@
+{"name":"Local: Chocolate Distribution","url":"d:\\codechef\\Chocolate Distribution.cpp","tests":[{"id":1694616488923,"input":"3\n4\n7\n11","output":"2 1 1\n2 3 2\n3 3 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codechef\\Chocolate Distribution.cpp","group":"local","local":true}

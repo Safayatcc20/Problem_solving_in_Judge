@@ -1,0 +1,1 @@
+{"name":"Local: d","url":"d:\\ICPC_2022\\d.cpp","tests":[{"id":1676115159935,"input":"2\n3 5 1 2\n3 9 6 2","output":"Case 1: Peaceful\nCase 2: Fight"},{"id":1676121215747,"input":"1\n4 6 18 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ICPC_2022\\d.cpp","group":"local","local":true}

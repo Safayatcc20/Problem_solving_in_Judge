@@ -1,0 +1,1 @@
+{"name":"Local: B - Modulo Number","url":"d:\\ATCODER\\B - Modulo Number.cpp","tests":[{"id":1661602707946,"input":"998244354","output":"1"},{"id":1661602719397,"input":"-9982443534","output":"998244349"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\B - Modulo Number.cpp","group":"local","local":true}

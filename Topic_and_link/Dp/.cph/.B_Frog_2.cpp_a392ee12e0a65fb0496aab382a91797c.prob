@@ -1,0 +1,1 @@
+{"name":"Local: B_Frog_2","url":"d:\\DP\\B_Frog_2.cpp","tests":[{"id":1705866484545,"input":"5 3\n10 30 40 50 20\n","output":"30\n"},{"id":1705866492145,"input":"3 1\n10 20 10\n","output":"20\n"},{"id":1705866499721,"input":"2 100\n10 10\n","output":"0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DP\\B_Frog_2.cpp","group":"local","local":true}

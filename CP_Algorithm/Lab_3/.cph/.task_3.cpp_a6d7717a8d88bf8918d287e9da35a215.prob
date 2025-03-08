@@ -1,0 +1,1 @@
+{"name":"Local: task_3","url":"d:\\CP_Algorithm\\Lab_3\\task_3.cpp","tests":[{"id":1696004616378,"input":"7\n2 -4 1 9 -6 7 3","output":"14"},{"id":1696004802124,"input":"5\n-1 -42 -2 -5 -5","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP_Algorithm\\Lab_3\\task_3.cpp","group":"local","local":true}

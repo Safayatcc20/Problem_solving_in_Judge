@@ -1,0 +1,1 @@
+{"name":"Local: A - Middle Letter","url":"d:\\ATCODER\\A - Middle Letter.cpp","tests":[{"id":1661601830244,"input":"atcoder\n","output":"o\n"},{"id":1661601857469,"input":"a\n","output":"a"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ATCODER\\A - Middle Letter.cpp","group":"local","local":true}

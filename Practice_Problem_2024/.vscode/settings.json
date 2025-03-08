@@ -62,7 +62,14 @@
     "numeric": "cpp",
     "cstdlib": "cpp",
     "ostream": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "ratio": "cpp",
+    "bitset": "cpp",
+    "cmath": "cpp",
+    "chrono": "cpp",
+    "random": "cpp",
+    "limits": "cpp",
+    "valarray": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

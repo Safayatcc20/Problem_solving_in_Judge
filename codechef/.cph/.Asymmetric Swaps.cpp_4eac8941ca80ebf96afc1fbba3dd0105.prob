@@ -1,0 +1,1 @@
+{"name":"Local: Asymmetric Swaps","url":"d:\\codechef\\Asymmetric Swaps.cpp","tests":[{"id":1673721540602,"input":"3\n3\n2 1 3\n1 4 1\n4\n2 1 4 3\n3 2 6 2\n5\n2 8 4 9 7\n7 3 6 8 4","output":"0\n1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codechef\\Asymmetric Swaps.cpp","group":"local","local":true}
