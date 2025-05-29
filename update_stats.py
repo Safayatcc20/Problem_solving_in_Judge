@@ -62,10 +62,13 @@ def fetch_codechef(username):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, "html.parser")
     try:
-        solved = soup.find("section", {"class": "rating-data-section problems-solved"}).find("h5").text
-        import re
-        count = int(re.findall(r'\d+', solved)[0])
-        return count
+        section = soup.find("section", {"class": "rating-data-section problems-solved"})
+        if section:
+            count_div = section.find("div", {"class": "rating-number"})
+            if count_div:
+                count = int(count_div.text.strip())
+                return count
+        return 0
     except:
         return 0
 
