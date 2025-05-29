@@ -3,20 +3,19 @@ from bs4 import BeautifulSoup
 
 # Your usernames on each platform
 USERNAMES = {
-    "Codeforces": "MishkatIT",
-    "CSES": "MishkatIT",
-    "LeetCode": "MishkatIT",
-    "CodeChef": "MishkatIT",
-    "AtCoder": "MishkatIT",
-    "SPOJ": "MishkatIT",
-    "LightOJ": "MishkatIT",
-    "Toph": "MishkatIT",
-    "Vjudge": "MishkatIT",
-    "HackerRank": "MishkatIT",
-    "UVa": "MishkatIT",
-    "HackerEarth": "MishkatIT",
+    "Codeforces": "Rifat02",
+    "CSES": "Safayatcc20",
+    "LeetCode": "safayatcc99",
+    "CodeChef": "safayatcc20",
+    "AtCoder": "safayatcc20",
+    "SPOJ": "safayatcc99",
+    "LightOJ": "safayatcc20",
+    "Toph": "safayatcc20",
+    "Vjudge": "safayat20",
+    "HackerRank": "safayatcc20",
+    "UVa": "safayatcc20",
+    "HackerEarth": "Safayat",
 }
-
 def fetch_codeforces(username):
     url = f"https://codeforces.com/profile/{username}"
     res = requests.get(url)
