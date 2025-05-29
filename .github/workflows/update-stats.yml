@@ -2,7 +2,7 @@ name: Update Problem Solving Stats
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # every minute
+    - cron: '*/5 * * * *'  # every minute
   workflow_dispatch:        # also allows manual trigger
 
 
