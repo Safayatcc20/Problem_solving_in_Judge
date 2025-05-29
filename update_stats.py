@@ -153,16 +153,15 @@ def main():
     for platform, username in USERNAMES.items():
         try:
             count = FETCH_FUNCTIONS[platform](username)
-            # If fetch failed or returned zero, fallback to manual override
+            # If fetch returned 0, fallback to override count if available
             if count == 0 and platform in OVERRIDE_COUNTS:
                 count = OVERRIDE_COUNTS[platform]
-            print(f"[{platform}] Solved: {count}")
         except Exception as e:
+            # On error fallback to override
             count = OVERRIDE_COUNTS.get(platform, 0)
-            print(f"[{platform}] Fetch error, fallback to override: {count} ({e})")
-
         results[platform] = count
         total += count
+
 
     with open("README.md", "r") as f:
         content = f.read()
