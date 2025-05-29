@@ -7,7 +7,7 @@
 | Codeforces   | Rifat02      | 1632            |
 | CSES         | Safayatcc20  | 40              |
 | LeetCode     | safayatcc99  | 57              |
-| CodeChef     | safayatcc20  | 233             |
+| CodeChef     | safayatcc20  | 2022            |
 | AtCoder      | safayatcc20  | 200             |
 | SPOJ         | safayatcc99  | 19              |
 | LightOJ      | safayatcc20  | 13              |
@@ -16,6 +16,6 @@
 | HackerRank   | safayatcc20  | 34              |
 | UVa          | safayatcc20  | 9               |
 | HackerEarth  | Safayat      | 3               |
-| **Total**    |              | **2716**        |
+| **Total**    |              | **4505**        |
 
 <!-- stats-end -->
