@@ -16,6 +16,23 @@ USERNAMES = {
     "UVa": "safayatcc20",
     "HackerEarth": "Safayat",
 }
+
+# Manual override for actual counts (if scraping is inaccurate)
+OVERRIDE_COUNTS = {
+    "Codeforces": 1632,
+    "CSES": 40,
+    "LeetCode": 57,
+    "CodeChef": 233,
+    "AtCoder": 200,
+    "SPOJ": 19,
+    "LightOJ": 13,
+    "Toph": 60,
+    "Vjudge": 416,
+    "HackerRank": 34,
+    "UVa": 9,
+    "HackerEarth": 3,
+}
+
 def fetch_codeforces(username):
     url = f"https://codeforces.com/profile/{username}"
     res = requests.get(url)
@@ -37,17 +54,7 @@ def fetch_cses(username):
         return 0
 
 def fetch_leetcode(username):
-    url = f"https://leetcode.com/{username}/"
-    res = requests.get(url)
-    soup = BeautifulSoup(res.text, "html.parser")
-    try:
-        # LeetCode loads data dynamically, so scraping might not work perfectly here.
-        # Use GraphQL or API tokens for better method.
-        # For now, try meta tag fallback or hardcoded zero.
-        # Placeholder for now
-        return 0
-    except:
-        return 0
+    return 0  # API recommended for accuracy
 
 def fetch_codechef(username):
     url = f"https://www.codechef.com/users/{username}"
@@ -55,7 +62,6 @@ def fetch_codechef(username):
     soup = BeautifulSoup(res.text, "html.parser")
     try:
         solved = soup.find("section", {"class": "rating-data-section problems-solved"}).find("h5").text
-        # text like: "Fully Solved (233)"
         import re
         count = int(re.findall(r'\d+', solved)[0])
         return count
@@ -67,7 +73,6 @@ def fetch_atcoder(username):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, "html.parser")
     try:
-        # On AtCoder, count solved problems by the number of "AC" in problem list
         ac_count = 0
         table = soup.find("table", {"class": "table table-bordered table-striped small"})
         if table:
@@ -84,7 +89,6 @@ def fetch_spoj(username):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, "html.parser")
     try:
-        # Solved problems count is in a table, look for "Problems solved:"
         text = soup.find(text="Problems solved:")
         if text:
             count = int(text.parent.find_next_sibling(text=True).strip())
@@ -94,15 +98,13 @@ def fetch_spoj(username):
         return 0
 
 def fetch_lightoj(username):
-    # No public API or easy scrape, set manual
-    return 0
+    return 0  # No scrape access
 
 def fetch_toph(username):
     url = f"https://toph.co/u/{username}"
     res = requests.get(url)
     soup = BeautifulSoup(res.text, "html.parser")
     try:
-        # Toph shows solved problems in stats card
         solved = soup.find("span", {"id": "solved-count"})
         if solved:
             return int(solved.text.strip())
@@ -111,7 +113,6 @@ def fetch_toph(username):
         return 0
 
 def fetch_vjudge(username):
-    # No official API; scraping is difficult.
     return 0
 
 def fetch_hackerrank(username):
@@ -119,17 +120,14 @@ def fetch_hackerrank(username):
     res = requests.get(url)
     try:
         data = res.json()
-        solved = data['model']['solved_challenges']
-        return int(solved)
+        return int(data['model']['solved_challenges'])
     except:
         return 0
 
 def fetch_uva(username):
-    # UVA does not have direct solved count publicly visible for users
     return 0
 
 def fetch_hackerearth(username):
-    # No public API for solved count, so 0 or manual
     return 0
 
 FETCH_FUNCTIONS = {
@@ -151,11 +149,14 @@ def main():
     results = {}
     total = 0
     for platform, username in USERNAMES.items():
-        count = FETCH_FUNCTIONS[platform](username)
+        if platform in OVERRIDE_COUNTS:
+            count = OVERRIDE_COUNTS[platform]
+        else:
+            count = FETCH_FUNCTIONS[platform](username)
         results[platform] = count
         total += count
 
-    # Now update your README.md (you must have <!-- stats-start --> and <!-- stats-end --> markers)
+    # Read README.md and inject table between markers
     with open("README.md", "r") as f:
         content = f.read()
 
@@ -163,8 +164,7 @@ def main():
     stats_table += "|--------------|--------------|-----------------|\n"
     for platform in USERNAMES.keys():
         stats_table += f"| {platform:<12} | {USERNAMES[platform]:<12} | {results[platform]:<15} |\n"
-    stats_table += f"| **Total**    |              | **{total}**      |\n"
-
+    stats_table += f"| **Total**    |              | **{total}**        |\n"
 
     start_marker = "<!-- stats-start -->"
     end_marker = "<!-- stats-end -->"
