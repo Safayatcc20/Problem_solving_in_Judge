@@ -4,7 +4,7 @@
 <!-- stats-start -->
 | Platform     | Username     | Solved Problems |
 |--------------|--------------|-----------------|
-| Codeforces   | Rifat02      | 1631            | 
+| Codeforces   | Rifat02      | 1632            |
 | CSES         | Safayatcc20  | 40              |
 | LeetCode     | safayatcc99  | 57              |
 | CodeChef     | safayatcc20  | 233             |
@@ -16,6 +16,6 @@
 | HackerRank   | safayatcc20  | 34              |
 | UVa          | safayatcc20  | 9               |
 | HackerEarth  | Safayat      | 3               |
-| **Total**    |              | **2715**        | 
+| **Total**    |              | **2716**        |
 
 <!-- stats-end -->
