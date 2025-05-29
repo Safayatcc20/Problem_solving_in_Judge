@@ -4,18 +4,18 @@
 <!-- stats-start -->
 | Platform     | Username     | Solved Problems |
 |--------------|--------------|-----------------|
-| Codeforces   | MishkatIT    | 0               |
-| CSES         | MishkatIT    | 0               |
-| LeetCode     | MishkatIT    | 0               |
-| CodeChef     | MishkatIT    | 66              |
-| AtCoder      | MishkatIT    | 0               |
-| SPOJ         | MishkatIT    | 0               |
-| LightOJ      | MishkatIT    | 0               |
-| Toph         | MishkatIT    | 0               |
-| Vjudge       | MishkatIT    | 0               |
-| HackerRank   | MishkatIT    | 0               |
-| UVa          | MishkatIT    | 0               |
-| HackerEarth  | MishkatIT    | 0               |
-| **Total**    |              | **66**      |
+| Codeforces   | Rifat02      | 0               |
+| CSES         | Safayatcc20  | 0               |
+| LeetCode     | safayatcc99  | 0               |
+| CodeChef     | safayatcc20  | 2022            |
+| AtCoder      | safayatcc20  | 0               |
+| SPOJ         | safayatcc99  | 0               |
+| LightOJ      | safayatcc20  | 0               |
+| Toph         | safayatcc20  | 0               |
+| Vjudge       | safayat20    | 0               |
+| HackerRank   | safayatcc20  | 0               |
+| UVa          | safayatcc20  | 0               |
+| HackerEarth  | Safayat      | 0               |
+| **Total**    |              | **2022**      |
 
 <!-- stats-end -->
