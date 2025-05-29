@@ -37,5 +37,6 @@ jobs:
           git add README.md
           git diff --cached --quiet || git commit -m "chore: update problem solving stats"
           git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+          continue-on-error: true
 
 
