@@ -54,7 +54,8 @@ def fetch_cses(username):
         return 0
 
 def fetch_leetcode(username):
-    return 0  # API recommended for accuracy
+    # LeetCode scraping is tricky, recommend API, so return 0 to fallback
+    return 0
 
 def fetch_codechef(username):
     url = f"https://www.codechef.com/users/{username}"
@@ -98,7 +99,8 @@ def fetch_spoj(username):
         return 0
 
 def fetch_lightoj(username):
-    return 0  # No scrape access
+    # No scrape access
+    return 0
 
 def fetch_toph(username):
     url = f"https://toph.co/u/{username}"
@@ -113,7 +115,7 @@ def fetch_toph(username):
         return 0
 
 def fetch_vjudge(username):
-    return 0
+    return 0  # No scraper
 
 def fetch_hackerrank(username):
     url = f"https://www.hackerrank.com/rest/hackers/{username}/profile"
@@ -125,10 +127,10 @@ def fetch_hackerrank(username):
         return 0
 
 def fetch_uva(username):
-    return 0
+    return 0  # No scraper
 
 def fetch_hackerearth(username):
-    return 0
+    return 0  # No scraper
 
 FETCH_FUNCTIONS = {
     "Codeforces": fetch_codeforces,
@@ -149,14 +151,19 @@ def main():
     results = {}
     total = 0
     for platform, username in USERNAMES.items():
-        if platform in OVERRIDE_COUNTS:
-            count = OVERRIDE_COUNTS[platform]
-        else:
+        try:
             count = FETCH_FUNCTIONS[platform](username)
+            # If fetch failed or returned zero, fallback to manual override
+            if count == 0 and platform in OVERRIDE_COUNTS:
+                count = OVERRIDE_COUNTS[platform]
+            print(f"[{platform}] Solved: {count}")
+        except Exception as e:
+            count = OVERRIDE_COUNTS.get(platform, 0)
+            print(f"[{platform}] Fetch error, fallback to override: {count} ({e})")
+
         results[platform] = count
         total += count
 
-    # Read README.md and inject table between markers
     with open("README.md", "r") as f:
         content = f.read()
 
