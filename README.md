@@ -4,17 +4,18 @@
 <!-- stats-start -->
 | Platform     | Username     | Solved Problems |
 |--------------|--------------|-----------------|
-| Codeforces   | Rifat02      | 1631            |
-| CSES         | Safayatcc20  | 40              |
-| LeetCode     | safayatcc99  | 57              |
-| CodeChef     | safayatcc20  | 233             |
-| AtCoder      | safayatcc20  | 200             |
-| SPOJ         | safayatcc99  | 19              |
-| LightOJ      | safayatcc20  | 13              |
-| Toph         | safayatcc20  | 60              |
-| Vjudge       | safayat20    | 416             |
-| HackerRank   | safayatcc20  | 34              |
-| UVa          | safayatcc20  | 9               |
-| HackerEarth  | Safayat      | 3               |
-| **Total**    |              | **2715**        |
+| Codeforces   | MishkatIT    | 0               |
+| CSES         | MishkatIT    | 0               |
+| LeetCode     | MishkatIT    | 0               |
+| CodeChef     | MishkatIT    | 66              |
+| AtCoder      | MishkatIT    | 0               |
+| SPOJ         | MishkatIT    | 0               |
+| LightOJ      | MishkatIT    | 0               |
+| Toph         | MishkatIT    | 0               |
+| Vjudge       | MishkatIT    | 0               |
+| HackerRank   | MishkatIT    | 0               |
+| UVa          | MishkatIT    | 0               |
+| HackerEarth  | MishkatIT    | 0               |
+| **Total**    |              | **66**      |
+
 <!-- stats-end -->
