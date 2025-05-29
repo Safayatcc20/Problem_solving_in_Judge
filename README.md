@@ -3,16 +3,16 @@
 
 | Platform     | Username     | Solved Problems |
 |--------------|--------------|-----------------|
-| Codeforces   | MishkatIT    | 2256            |
-| CSES         | MishkatIT    | 64              |
-| LeetCode     | MishkatIT    | 367             |
-| CodeChef     | MishkatIT    | 74              |
-| AtCoder      | MishkatIT    | 130             |
-| SPOJ         | MishkatIT    | 21              |
-| LightOJ      | MishkatIT    | 30              |
-| Toph         | MishkatIT    | 29              |
-| Vjudge       | MishkatIT    | 319             |
-| HackerRank   | MishkatIT    | 7               |
-| UVa          | MishkatIT    | 4               |
-| HackerEarth  | MishkatIT    | 3               |
-| **Total**    |              | **3304**        |
+| Codeforces   | Rifat02      | 1631            |
+| CSES         | Safayatcc20  | 40              |
+| LeetCode     | safayatcc99  | 57              |
+| CodeChef     | safayatcc20  | 233             |
+| AtCoder      | Safayatcc20  | 200             |
+| SPOJ         | safayatcc99  | 19              |
+| LightOJ      | safayatcc20  | 13              |
+| Toph         | safayatcc20  | 60              |
+| Vjudge       | safayat20    | 416             |
+| HackerRank   | safayatcc20  | 34              |
+| UVa          | safayatcc20  | 9               |
+| HackerEarth  | Safayat      | 3               |
+| **Total**    |              | **2715**        |
