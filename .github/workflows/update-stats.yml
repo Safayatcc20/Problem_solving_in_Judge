@@ -2,9 +2,9 @@ name: Update Problem Solving Stats
 
 on:
   schedule:
-  - cron: '0 * * * *'  # runs at the start of every hour UTC
+    - cron: '*/1 * * * *'  # every minute
+  workflow_dispatch:        # also allows manual trigger
 
-  workflow_dispatch:       # Allows manual run from GitHub UI
 
 jobs:
   update-stats:
