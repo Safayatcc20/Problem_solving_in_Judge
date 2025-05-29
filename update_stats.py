@@ -160,10 +160,12 @@ def main():
     with open("README.md", "r") as f:
         content = f.read()
 
-    stats_table = "| Platform    | Solved Problems |\n| ----------- | --------------- |\n"
+    stats_table = "| Platform     | Username     | Solved Problems |\n"
+    stats_table += "|--------------|--------------|-----------------|\n"
     for platform in USERNAMES.keys():
-        stats_table += f"| {platform:<11} | {results[platform]:<15} |\n"
-    stats_table += f"| **Total**   | {total:<15} |\n"
+        stats_table += f"| {platform:<12} | {USERNAMES[platform]:<12} | {results[platform]:<15} |\n"
+    stats_table += f"| **Total**    |              | **{total}**      |\n"
+
 
     start_marker = "<!-- stats-start -->"
     end_marker = "<!-- stats-end -->"
