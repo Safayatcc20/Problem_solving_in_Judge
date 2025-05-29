@@ -151,12 +151,16 @@ def main():
     results = {}
     total = 0
     for platform, username in USERNAMES.items():
-        if platform in OVERRIDE_COUNTS:
-            count = OVERRIDE_COUNTS[platform]
-        else:
+        try:
             count = FETCH_FUNCTIONS[platform](username)
-
-    
+            # If fetch returned 0, fallback to override count if available
+            if count == 0 and platform in OVERRIDE_COUNTS:
+                count = OVERRIDE_COUNTS[platform]
+        except Exception as e:
+            # On error fallback to override
+            count = OVERRIDE_COUNTS.get(platform, 0)
+        results[platform] = count
+        total += count
 
 
     with open("README.md", "r") as f:
