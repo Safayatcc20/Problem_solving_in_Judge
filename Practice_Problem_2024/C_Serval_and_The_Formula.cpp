@@ -91,58 +91,33 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
-
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
-}
-
 void solve(){
-    int n ;
-    cin >> n ;
-    vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
+    int x, y;
+    cin >> x >> y;
+    if(x == y){
+        cout << -1 << sad;
+        return;
+    }
+    if( x + y == ( x^y)){
+        cout << 0 << sad;
+        return;
+    }
+    if( (x & y) == 0){
+        cout << 0 << sad;
+        return;
+    }
+    if( x < y) swap(x, y);
+    int ans = 0;
+    bitset<32> bx(x), by(y);
+    for(int i = 0; i < 32; i++){
+        if(bx[i] == 1 ){
+            ans = i;
         }
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
-
+    int k = (1ll<<(ans + 1)) ;
+    k = k - x;
+    //cout << (k + y) + (k + x) << " "<< ((k+ x ) ^(k + y)) << sad;
+    cout << k << sad;
 }
 int32_t main()
 {

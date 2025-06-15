@@ -91,58 +91,81 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
-
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
+const long long N = 1e7 + 10;
+bool prime[N+1];
+vector<long long>pl;
+void sieve()
+{
+    prime[1] = prime[0] = true;
+    //jodi isprime use na kori tkn ei line use korte hobe
+    //for (long long i = 3; i * i <= N; i += 2) prime[i] = true;
+    for (long long i = 4; i <= N; i += 2) {
+        prime[i] = true; // Mark all even numbers > 2 as not prime
 }
-
+    for (long long i = 3; i * i <= N; i += 2)
+    {
+        if (prime[i])
+        {
+            continue;
+        }
+        for (long long j = i * i; j < N; j += i + i)
+        {
+            prime[j] = true;
+        }
+    }
+    for (long long i = 2; i<= N; i++)
+       if(prime[i] == false) pl.push_back(i);
+}
+bool isprime(long long x)
+{
+    if (x == 2)
+        return true;
+    else if ((x % 2 == 0))
+        return false;
+    return !prime[x];
+}
+vector<int>primelist;
+bool is_composite[N];
+//Linear Sieve
+//the code below performs in O(n) complexity for seive
+void linear_sieve () {
+    std::fill (is_composite, is_composite + N, false);
+    for (int i = 2; i < N; ++i) {
+      if (!is_composite[i]) primelist.push_back (i);
+      for (int j = 0; j < primelist.size () && i * primelist[j] < N; ++j) {
+           is_composite[i * primelist[j]] = true;
+           if (i % primelist[j] == 0) break;
+      }
+    }
+}
 void solve(){
-    int n ;
+    int n;
     cin >> n ;
     vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
+    for(auto &x: v) cin >> x;
+    sort(all(v));
+    reverse(all(v));
+    int ans = 0, j = 0, val = n ;
+    for(int i = 0 ;i < n; i++){
+        if(pl[j] != v[i]){
+            if(pl[j] < v[i]) {
+                ans+= v[i]-pl[j];
+                j++;
+            }
+            else {
+                ans-= pl[j]-v[i];
+                j++;
+            }
         }
+        else j++;
+        if(ans < 0){
+            val = i;
+            // cout << i << " hi "<< ans << sad;
+            break;
+        }
+        // cout << i << " "<< ans << " "<< v[i] <<  " "<< pl[j-1]<< sad;
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
-
+    cout << n - val << sad;
 }
 int32_t main()
 {
@@ -151,6 +174,8 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
+    sieve();
+    //cout << pl.size() << '\n';
     cin >> t;
     while (t--)
     {

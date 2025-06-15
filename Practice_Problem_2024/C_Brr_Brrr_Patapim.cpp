@@ -91,58 +91,37 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
-
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
-}
-
 void solve(){
     int n ;
-    cin >> n ;
-    vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
+    cin >> n; 
+    vector<vector<int>>v(n, vector<int>(n));
+    map<int , int>mp;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> v[i][j];
+            mp[v[i][j]]=1;
         }
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
-
+    vector<int>ans;
+    for(int i = 0 ; i< n; i++){
+        ans.push_back(v[0][i]);
+    }
+    for(int i = 1 ; i< n; i++){
+        ans.push_back(v[i][n-1]);
+    }
+    int prev = 0 ;
+    for(int i = 1; i <= n*n+1;i++){
+        // cout << i << " "<< mp[i] << sad;
+        if(mp[i] == 0){
+            prev = i;
+            break;
+        }
+    }
+    cout << prev << " ";
+    for(int i = 0 ; i< ans.size(); i++){
+        cout << ans[i] << " ";
+    }
+    cout << sad;
 }
 int32_t main()
 {

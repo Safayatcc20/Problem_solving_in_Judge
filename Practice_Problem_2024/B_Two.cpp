@@ -91,58 +91,46 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
 
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
+struct build{
+    int s , w , h;
+};
+bool cmp(build &a, build &b){
+    return a.s < b.s;
 }
-
 void solve(){
-    int n ;
-    cin >> n ;
-    vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
-        }
+    int n;
+    cin >> n;
+    vector<build>v(n);
+    for(int i = 0; i < n; i++){
+        cin >> v[i].s >> v[i].w >> v[i].h;
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
 
+    sort(all(v), cmp);
+    int ans = 0;
+    int curx = 0 , cury = 0 ; 
+    for(int i = 0; i < n; i++){
+        if(curx < v[i].s){
+            ans += (v[i].s - curx);
+            curx = v[i].s;
+            ans +=abs(v[i].h+cury);
+        }
+
+        // cout << ans << " " << curx << " " << cury << '\n';
+        else ans +=abs(v[i].h-cury);
+        cury =v[i].h;
+        ans += v[i].w;
+        curx += v[i].w;
+
+        // cout << ans << " done " << curx << " " << cury << '\n';
+    }
+
+    if(curx < 100){
+        ans += cury;
+        ans += (100 - curx);
+    }
+
+    cout << ans << sad;
 }
 int32_t main()
 {
@@ -151,7 +139,7 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         solve();

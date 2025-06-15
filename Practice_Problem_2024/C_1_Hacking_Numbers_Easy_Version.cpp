@@ -91,69 +91,47 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
-
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
+int yes(string s, int x){
+    cout <<s <<  " " ;
+    cout << x << sad;
+    int y;
+    cin >> y;
+    return y;
 }
-
+int noo(){
+    cout << "digit" <<sad;
+    int x;
+    cin >> x;
+}
 void solve(){
-    int n ;
-    cin >> n ;
-    vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
-        }
-    }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
+    int n;
+    cin >> n;
+    int ans = yes("mul",9);
+    assert(ans != 0);
 
+    int cnt = 2;
+    while(cnt>0){
+        noo();
+        cnt--;
+    }
+    ans = yes("add",n-9);
+    assert(ans != 0);
+    cout << "!" << sad;
+    int x;
+    cin >> x;
+    assert(x == 1);
 }
 int32_t main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(nullptr)->sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(nullptr)->sync_with_stdio(false);
+    // cin.tie(0);
+    // cout.tie(0);
     // long long t;
     cin >> t;
     while (t--)
     {
         solve();
+        cout.flush();
     }
 }

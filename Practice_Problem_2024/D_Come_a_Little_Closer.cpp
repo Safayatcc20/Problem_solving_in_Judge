@@ -91,57 +91,97 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
 
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
+bool comp(pair<int, int> &a, pair<int, int> &b){
+    if(a.first == b.first) return a.second < b.second;
+    return a.first < b.first;
 }
-
 void solve(){
-    int n ;
-    cin >> n ;
-    vector<int>v(n);
-    for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
+    int n;
+    cin >> n;
+    vector<pair<int, int>> v(n);
+    vector<int>row(n), col(n);
+    map<int, int> mpr, mpc;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i].first >> v[i].second;
+        row[i] = v[i].first;
+        mpr[v[i].first]++;
+        col[i] = v[i].second;
+        mpc[v[i].second]++;
+    } 
+    if(n == 1){
+        cout << 1 << sad;
+        return;
+    }  
+    sort(row.begin(), row.end());
+    sort(col.begin(), col.end());
+
+    int ans = 1e18;
+    sort(v.begin(), v.end(), comp);
+    int mnr = row[0], mnc = col[0], mxr = row[n-1], mxc = col[n-1];
+    for(int i = 0 ; i < n ;i++){
+        int x = v[i].first, y = v[i].second;
+        mpr[x]--;
+        mpc[y]--;
+        // cout << x << " "<< y << " ";
+        // cout << mpr[x] << " "<< mpc[y]<< sad;
+        if(mpr[x] > 0){
+            mnr = row[0];
+            mxr = row[n-1];
         }
+        else{
+            int ind = lower_bound(row.begin(), row.end(), x) - row.begin();
+            
+            if(ind == n-1){
+                mxr = row[ind-1];
+                mnr = row[0];
+            }
+            else{
+                if(ind == 0) {
+                    mnr = row[ind+1];
+                    mxr = row[n-1];
+                }
+                else{
+                    mnr = row[0];
+                    mxr = row[n-1];
+                }
+            }
+        }
+        if(mpc[y] > 0){
+            mnc = col[0];
+            mxc = col[n-1];
+        }
+        else{
+            int ind = lower_bound(col.begin(), col.end(), y) - col.begin();
+            // cout << ind << " hi ";
+            if(ind == n-1){
+                mxc = col[ind-1];
+                mnc = col[0];
+            }
+            else{
+                if(ind == 0) {
+                    mnc = col[ind+1];
+                    mxc = col[n-1];
+                }
+                else{
+                    mnc = col[0];
+                    mxc = col[n-1];
+                }
+            }
+        }
+        mpr[x]++;
+        mpc[y]++;
+        int needrow = (mxr - mnr + 1);
+        int needcol = ( mxc-mnc+1);
+        if(needcol*needrow < n){
+            ans = min(ans , needcol*(needrow+1));
+            ans = min(ans , (needcol+1)*(needrow));
+        }
+        else ans = min(ans , (mxr - mnr + 1) *( mxc-mnc+1));
+        // cout << mnr << " chk "<< mxr << " "<< mnc<< " "<< mxc<< " "<< ans << sad; 
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
+    cout << ans << sad;
 
 }
 int32_t main()

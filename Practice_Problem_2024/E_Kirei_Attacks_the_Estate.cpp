@@ -91,58 +91,36 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
 
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
+
+void dfs(int u , int par , int path, int val, vector<int>&ans , vector<int>&v , vector<vector<int>>&g){
+
+    ans[u-1] = max(v[u-1] , v[u-1] - path);
+    path = min(v[u-1] , v[u-1] - val);
+
+    for(auto &x:g[u]){
+        if(par != x){
+            dfs(x , u , path , ans[u-1] , ans , v , g);
         }
     }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
 }
-
 void solve(){
-    int n ;
-    cin >> n ;
+    int n;
+    cin >> n;
     vector<int>v(n);
     for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
-        }
+    vector<vector<int>>g(n +1);
+    for(int i = 0 ; i < n- 1; i++){
+        int u , v;
+        cin >> u >> v;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
 
+    vector<int>ans(n,0);
+    dfs(1 , 0, 0 , 0 , ans , v , g);
+    for(auto &x:ans) cout << x << " ";
+    cout << sad;
 }
 int32_t main()
 {

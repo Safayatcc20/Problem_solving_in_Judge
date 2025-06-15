@@ -91,58 +91,32 @@ void init(){
      //     phai[i] += phai[i-1];
      // }
 }
-const int mod = 998244353;
-const int N = 2e5+10;
-int dp[N][2][2][2];
-int fun(vector<int>&v,int ind , int one , int two , int thr){
-    if(ind >= v.size() ) {
-        if(one and two and thr) return 1;
-        return 0;
-    }
-    int &ans = dp[ind][one][two][thr];
-    if(ans != -1) return ans;
-
-    ans = fun(v ,ind + 1 , one , two , thr);
-    if(thr){
-        return ans;
-    }
-    if(one == 0){
-        if(v[ind] == 1LL){
-            ans+= fun(v, ind + 1LL, 1LL ,two, thr);
-            ans%= mod;
-        }
-    }
-    if(one){
-        if(v[ind] == 2LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, thr);
-            ans%= mod;
-        }
-    }
-    if(one and two){
-        if(v[ind] == 3LL){
-            ans+= fun(v, ind + 1LL, 1LL ,1LL, 1LL);
-            ans%= mod;
-        }
-    }
-    return ans;
-}
 
 void solve(){
-    int n ;
-    cin >> n ;
-    vector<int>v(n);
+    vector<int>v(7);
+    int n = 7;
     for(auto &x:v) cin >> x;
-    for(int i = 0 ; i < n;i++){
-        for(int j=0;j < 2; j++){
-            for(int k=0;k < 2; k++){
-                for(int l=0;l < 2; l++){
-                    dp[i][j][k][l] = -1;
-                }
-            }   
+    map<int , int>mp;
+    for(auto &x:v) {
+        mp[x]++;
+    }
+    bool f = false , ff = false;
+    int cnt = 0 ;
+    // for(auto &x:mp){
+    //     cout << x.first << " "<< x.second << sad;
+    // }
+    for(auto &x:mp){
+        if(x.second >= 3){
+            f = true;
+            cnt++;
+        }
+        if(x.second == 2){
+            ff = true;
         }
     }
-    cout << fun(v,0 , 0, 0 , 0) << sad;
-
+    if(f and ff) cout << "Yes"<< sad;
+    else if(cnt > 1) cout << "Yes"<< sad;
+    else cout << "No"<< sad;
 }
 int32_t main()
 {
@@ -151,7 +125,7 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     // long long t;
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         solve();
