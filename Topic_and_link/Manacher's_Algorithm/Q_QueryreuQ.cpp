@@ -24,23 +24,58 @@ string preprocess(const string &s)
     }
     return t;
 }
-string s ;
-int CountPalindrom()
+
+int CountPalindrom(const string &s)
 {
 
-    int N = s.size();
-	vector<int> R(N);
-	int i=0,j=0;
-	while(i<N){
-		while(i-j>=0 && i+j<N && s[i-j] == s[i+j]) ++j;
-		R[i]=j;
-		int k=1; 
-		while(i-k>=0 && i+k<N && k+R[i-k]<j) R[i+k]=R[i-k],++k;
-		i+=k,j-=k;
-	}
-	long long res = 0;
-	for(int i = 0 ; i < N; i++) res += R[i]/2;
-	return res;
+    string t = s;
+    int n = t.size();
+    vector<int> P(n, 0);
+    int center = 0, right = 0;
+
+    int maxLen = 0, centerIndex = 0;
+
+    int total = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        int mirror = 2 * center - i;
+
+        if (i < right)
+            P[i] = min(right - i, P[mirror]);
+
+        // Try to expand around i
+        while (i + P[i] + 1 < n && i - P[i] - 1 >= 0 &&
+               t[i + P[i] + 1] == t[i - P[i] - 1])
+        {
+            ++P[i];
+        }
+
+        // Update center and right boundary
+        if (i + P[i] > right)
+        {
+            center = i;
+            right = i + P[i];
+        }
+
+        // Track the max
+        if (P[i] > maxLen)
+        {
+            maxLen = P[i];
+            centerIndex = i;
+        }
+        if (n & 1)
+        {
+            total += (P[i] + 1) / 2;
+        }
+        else
+        {
+            total += (P[i] + 2) / 2;
+        }
+    }
+
+    // Extract the longest palindrome from the original string
+    int start = (centerIndex - maxLen) / 2;
+    return total;
 }
 // for odd length palindrome, p[i] = length of longest palindromic substring centered at i
 // for even length palindrome, p[i] = length of longest palindromic substring centered between i and i+1
@@ -50,22 +85,26 @@ int CountPalindrom()
 // 1.total += (p[i] + 1) / 2 for odd length and
 // 2.total += (p[i] + 2) / 2 for even length
 // do it inside the for loop
-void solve() {
+void solve()
+{
     int n;
     cin >> n;
-    string ops;
-    cin >> ops;
-
-    s = "$";  // same as Code 1
-    for (int i = 0; i < n; ++i) {
-        if (ops[i] == '-') {
-            s.pop_back();  // pop '$'
-            s.pop_back();  // pop actual character
-        } else {
-            s.push_back(ops[i]);
-            s.push_back('$');  // add separator
+    string s;
+    cin >> s;
+    string ss="#";
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] == '-')
+        {
+            ss.pop_back();
+            ss.pop_back();
         }
-        cout << CountPalindrom() << " ";
+        else
+        {
+            ss.push_back(s[i]);
+            ss.push_back('#');
+        }
+        cout << CountPalindrom(ss)<< " ";
     }
 }
 
@@ -82,6 +121,23 @@ int32_t main()
         solve();
     }
 }
+
+/* 
+Solution Dp 
+Main logic
+    if (c == '-') {
+			for (int i = 1; i <= len; ++i) cur -= dp[i][len], dp[i][len] = 0;
+			s.pop_back(); --len;
+		}
+		else {
+			s += c; ++len;
+			for (int i = 1; i + 1 < len; ++i) dp[i][len] = (dp[i + 1][len - 1] && s[i] == s[len]), cur += dp[i][len];
+			dp[len][len] = 1; ++cur;
+			if (s[len] == s[len - 1]) dp[len - 1][len] = 1, ++cur;
+		}
+		cout << cur << '\n';
+*/
+
 // Solution using brute force 
 /* #include<bits/stdc++.h>
 using namespace std;

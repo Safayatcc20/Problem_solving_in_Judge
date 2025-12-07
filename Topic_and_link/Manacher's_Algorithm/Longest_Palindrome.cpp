@@ -145,6 +145,7 @@ string longestPalindromicSubstring(const string &s) {
 // total number of palidromic substr. count formula
   //1.total += (p[i] + 1) / 2for odd length and 
   //2.total += (p[i] + 2) / 2 for even length
+  // do it inside the for loop 
 void solve(){
     string s;
     cin >> s;

@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\Problem_Solving\\Topic_and_link\\Graph_Theory_ICPC_Practice\\B.cpp","tests":[{"id":1761212919705,"input":"4\n3\n6\n11\n8\n\n","output":"0\n8\n39\n21\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Problem_Solving\\Topic_and_link\\Graph_Theory_ICPC_Practice\\B.cpp","group":"local","local":true}

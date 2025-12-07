@@ -1,0 +1,1 @@
+{"name":"Local: KMP_Algorithm","url":"d:\\Graph\\KMP_Algorithm.cpp","tests":[{"id":1685729689864,"input":"3\nababab ab\naaaaa bbb\naafafaasf aaf","output":"3\n1 3 5\n\nNot Found\n\n1\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Graph\\KMP_Algorithm.cpp","group":"local","local":true}

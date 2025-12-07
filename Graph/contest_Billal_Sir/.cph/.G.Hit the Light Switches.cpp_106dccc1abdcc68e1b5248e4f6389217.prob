@@ -1,0 +1,1 @@
+{"name":"Local: G","url":"d:\\Graph\\contest_Billal_Sir\\G.Hit the Light Switches.cpp","tests":[{"id":1676071042797,"input":"2\n5 4\n1 2\n1 3\n3 4\n5 3\n\n4 4\n1 2\n1 3\n4 2\n4 3","output":"Case 1: 2\nCase 2: 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Graph\\contest_Billal_Sir\\G.Hit the Light Switches.cpp","group":"local","local":true}

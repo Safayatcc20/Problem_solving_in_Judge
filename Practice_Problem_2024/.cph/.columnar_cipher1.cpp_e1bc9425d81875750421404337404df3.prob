@@ -1,0 +1,1 @@
+{"name":"Local: columnar_cipher1","url":"d:\\Problem_Solving\\Practice_Problem_2024\\columnar_cipher1.cpp","tests":[{"id":1751179346847,"input":"helloworld\nkey\n\n5 9 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Problem_Solving\\Practice_Problem_2024\\columnar_cipher1.cpp","group":"local","local":true}

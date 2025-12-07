@@ -1,0 +1,1 @@
+{"name":"Local: city_and_flood","url":"d:\\Graph\\city_and_flood.cpp","tests":[{"id":1675278802965,"input":"4 2\n1 2\n4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Graph\\city_and_flood.cpp","group":"local","local":true}

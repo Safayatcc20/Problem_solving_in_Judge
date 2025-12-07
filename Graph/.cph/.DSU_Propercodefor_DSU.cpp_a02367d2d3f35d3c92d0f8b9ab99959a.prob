@@ -1,0 +1,1 @@
+{"name":"Local: DSU_Propercodefor_DSU","url":"d:\\Graph\\DSU_Propercodefor_DSU.cpp","tests":[{"id":1720889578384,"input":"6 3\n1 2 \n2 3\n4 5","output":""},{"id":1720893459968,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Graph\\DSU_Propercodefor_DSU.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: kosarjus","url":"d:\\Graph\\kosarjus.cpp","tests":[{"id":1676066724828,"input":"4 5\n1 2 \n1 3 \n2 4 \n3 4 \n4 1 ","output":""},{"id":1676067651219,"input":"5 6\n0 1\n1 2\n1 4\n2 3\n3 2\n4 0","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Graph\\kosarjus.cpp","group":"local","local":true}
