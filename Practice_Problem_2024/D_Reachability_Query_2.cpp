@@ -111,7 +111,7 @@ void init()
     // }
 }
 
-const int N = 300000;
+const int N = 300000+5;
 
 int visited[N];
 stack<int> s;

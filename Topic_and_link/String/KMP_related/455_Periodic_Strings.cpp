@@ -41,22 +41,8 @@ void solve(){
     } */
     //cout << sad;
     int n = lps[s.size()-1];
-    //cout << n << sad;
-    for(int i = n ; i< s.size(); i++){
-        if(cnt == 9) break;
-        cnt++;
-        t += s[i];
-    }
-    cout << t;
-    if(t.size() != 8){
-        for(int i = 0 ; i < t.size(); i++){
-            if(cnt == 9) break;
-            cnt++;
-            cout << t[i];
-            if(i == t.size()-1) i = -1;
-        }
-    }
-    cout << "..." << sad;
+    if( n % (s.size() - n)== 0) cout << (s.size()- n) << sad;
+    else cout << s.size() << sad;
 }
 int main()
 {
@@ -69,5 +55,6 @@ int main()
     while (t--)
     {
         solve();
+        if(t) cout << sad;
     }
 }
